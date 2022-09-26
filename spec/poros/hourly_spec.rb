@@ -4,19 +4,19 @@ RSpec.describe Hourly do
   it "exists and has attributes" do
     data =
         {
-          :dt=>1664080279,
-          :temp =>60.06,
+          :dt=>1784680942,
+          :temp =>71.78,
           :weather=>[{
-            :description=>"clear sky",
+            :description=>"rainy",
             :icon=>"01n"
           }]
         }
     hourly_weather = Hourly.new(data)
 
     expect(hourly_weather).to be_a(Hourly)
-    expect(hourly_weather.temperature).to eq(60.06)
-    expect(hourly_weather.time).to eq("2022-09-24 21:31:19.000000000 -0700")
-    expect(hourly_weather.conditions).to eq("clear sky")
+    expect(hourly_weather.temperature).to eq(71.78)
+    expect(hourly_weather.time).to eq("2026-07-21 19:42:22.000000000 -0500")
+    expect(hourly_weather.conditions).to eq("rainy")
     expect(hourly_weather.icon).to eq("01n")
   end
 end

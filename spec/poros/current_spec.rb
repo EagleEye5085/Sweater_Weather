@@ -5,17 +5,17 @@ RSpec.describe Current do
 
     data =
         {
-          :dt=>1664080279,
-          :sunrise=>1664023766,
-          :sunset=>1664067263,
-          :temp=>60.96,
-          :feels_like=>58.41,
-          :humidity=>35,
+          :dt=>1738495068,
+          :sunrise=>1827365466,
+          :sunset=>1787676565,
+          :temp=>70.23,
+          :feels_like=>72.73,
+          :humidity=>45,
           :dew_point=>33.15,
-          :uvi=>0,
-          :visibility=>10000,
+          :uvi=>5,
+          :visibility=>183654,
           :weather=>[{
-            :description=>"clear sky",
+            :description=>"cloudy",
             :icon=>"01n"
           }]
         }
@@ -23,15 +23,15 @@ RSpec.describe Current do
     weather = Current.new(data)
 
   expect(weather).to be_a(Current)
-  expect(weather.datetime).to eq("2022-09-24 21:31:19.000000000 -0700")
-  expect(weather.sunrise).to eq("2022-09-24 05:49:26.000000000 -0700")
-  expect(weather.sunset).to eq("2022-09-24 17:54:23.000000000 -0700") #refactor these later for more readability
-  expect(weather.temperature).to eq(60.96)
-  expect(weather.feels_like).to eq(58.41)
-  expect(weather.humidity).to eq(35)
-  expect(weather.uvi).to eq(0)
-  expect(weather.visibility).to eq(10000)
-  expect(weather.conditions).to eq("clear sky")
+  expect(weather.datetime).to eq("2025-02-02 05:17:48.000000000 -0600")
+  expect(weather.sunrise).to eq("2027-11-27 19:31:06.000000000 -0600")
+  expect(weather.sunset).to eq("2026-08-25 11:49:25.000000000 -0500") #refactor these later for more readability
+  expect(weather.temperature).to eq(70.23)
+  expect(weather.feels_like).to eq(72.73)
+  expect(weather.humidity).to eq(45)
+  expect(weather.uvi).to eq(5)
+  expect(weather.visibility).to eq(183654)
+  expect(weather.conditions).to eq("cloudy")
   expect(weather.icon).to eq("01n")
   end
 end
