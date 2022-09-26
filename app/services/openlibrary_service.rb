@@ -7,8 +7,8 @@ class OpenlibraryService
     end
 
 
-    def self.find(address)
-      find = JSON.parse(get_url.get("/search.json?q=#{address}").body, symbolize_names: true)
+    def self.find(address,limit)
+      find = JSON.parse(get_url.get("/search.json?q=#{address}&limit=#{limit}").body, symbolize_names: true)
     end
 
   end
