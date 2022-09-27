@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       get "/book-search", to: 'book#search'
       get "/forecast", to: 'forecast#location_weather'
-      resorces :users
+      resources :users
     end
   end
 end
