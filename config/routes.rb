@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       get "/book-search", to: 'book#search'
       get "/forecast", to: 'forecast#location_weather'
       resources :users
+      resources :sessions
     end
   end
 end
